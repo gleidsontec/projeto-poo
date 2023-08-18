@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1>CADASTRE-SE</h1>
+    <form action="pagina_inicial.php">
+            
 
     <form 
             <label for="iusername">Nome de usuário:</label><br>

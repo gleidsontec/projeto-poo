@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aluguel de Estudio</title>
+    <title>Document</title>
 </head>
 <body>
-    
 <?php 
-   
 
 ?>
      <div class="container">
         <h1>SEJA BEM VINDO!</h1>
        
-        <form action="process_loguin.php">
+        <form action="pagina_inicial.php">
+            
         <label for="iusername">Nome do Usúario </label>
         <br>
         <input type="test" name="username"
@@ -28,12 +27,15 @@
         
         id="ipassword" required><br>
         <br>
-        <input type="submit">
+        <input type="submit"> <a href="pagina_inicial.php"></a>
+
        
 
         </form>
 
-        <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se aqui</
+        <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se aqui</p
+
+        <p>Menu inical</p><a href="menu.php"></a>  
 
         
        
