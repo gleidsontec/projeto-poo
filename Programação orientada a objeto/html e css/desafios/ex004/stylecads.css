@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(159, 197, 120, 0.719);
+    text-align: center;
+    
+}
+
+
+h1{
+    text-align: center;
+}
+
+input[type="text"],
+input[type="name"]{
+    background-color: rgb(255, 252, 252);
+    width: 100%;
+    
+    
+}
+
+.cadastro{
+    align-content: center;
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+}
+
+.container{
+    margin-left: 30%;
+    background-color:white;
+    width: 500px;
+    height: 600px;
+    margin-top: 3%;
+}

@@ -1,0 +1,30 @@
+@charset "UFT-8";
+
+BODY
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-size: 2.5; /*2em significa 2x o tamanho padrão da letra que e 16px*/
+    color: burlywood;
+
+}
+
+h2{
+    color: blue;
+}
+
+#titulo_principal {
+    color: lightseagreen;
+    text-align: center;
+    background-color: rgb(225, 220, 245);
+
+}
+.topico{
+    text-align: right;
+}
+
+.texto{
+    text-align:  justify;
+}

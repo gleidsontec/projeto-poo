@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247, 3, 3);
+    margin:0;
+    padding: 0;
+   background: linear-gradient(to bottom,#7f1def, #ad0011);
+
+   }
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+   }
+
+.login-box{
+    background-color: #ffff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 10px lightgray;
+    text-align: center;
+}
+.logo{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.use-box{
+    position: relative;
+    margin-bottom: 20px;
+}
+input[type="test"],
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #9999;
+    outline: none;
+    margin-top: 5px;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+   
+    transition: 0.2s;
+}
+input[type="test"]:focus ~ label,
+input[type="password"]:focus ~ label,
+input[type="test"]:valid ~ label,
+input[type="password"]:valid ~ label
+
+{
+    top: -10;
+    font-size: 15px;
+    color: #00000066;
+}
+botton{
+    padding: 12px 20px;
+    background-color: #2600ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+button:hover {
+    background-color: #005ead;
+
+}
+
+a{
+    color: #2600ff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+}
+
+

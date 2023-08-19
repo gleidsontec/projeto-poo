@@ -1,0 +1,22 @@
+@charset "UFT-8";
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    color:darkgrey
+}
+
+/*Estilos para o meu cabeçalho*/
+header{
+    background-color: beige;
+    color: aqua;
+    padding: 10px;
+}
+
+
+
+
+
+

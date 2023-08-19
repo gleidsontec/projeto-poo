@@ -1,0 +1,123 @@
+@charget "UFT-8";
+
+/*
+Paleta de Cores
+Verde: #49a09d
+Lilás: #2f2c82
+*/
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/*Qualquer caixa que eu colocar dentro dessa caixa, ela vai respeitar as bordas da mesma.*/
+}
+
+body, html{
+    background-image: linear-gradient(to top, #b9207c, #7ab143);/*Minha imagem de fundo vai ser uma mistura das cores. "Gradient" é degradê*/
+    height: 100vh;/*100% da minha altura*/
+    width: 100vw;/*100% da minha largura*/ /*Com o height e width eu estou dizendo que meu "body" ocupa 100% da tela*/
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+section#login{
+    /*position: absolute;
+    top: 10%;
+    left: 18%;*/
+    margin: auto;
+    margin-top: 15px;
+    overflow: hidden;/*Evita que o conteúdo fique pra fora da sua caixa, serve para qnd vc mudar de dispositivo ele mude o formato do conteúdo para caber na tela*/
+    background-color: white;
+    width: 300px;
+    height: 520px;
+    border-radius: 20px;/*Bordas arredondadas*/
+    box-shadow: 0px 0px 10 px lightslategray;
+    transition-timing-function: ease;/**/
+}
+
+section#login > div#imagem{
+    display: block;
+    background: #5f2c82 url('../imagens/login.jpg') no-repeat;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+section#login > div#formulario{
+    display: block;
+    padding: 10px;    
+}
+
+div#formulario > h1{ 
+    text-align: center;
+    margin-bottom: 10px;
+}
+div#formulario > p{
+    font-size: 0.8em;
+    text-align: justify;
+}
+form > div.campo{/*O "ponto" serve para chamar uma class*/
+        background-color: #2f2c82;
+        border: 2px solid;
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        margin: 5px 0px;
+}
+div.campo > label{
+    display: none;
+}
+div.campo> span{
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input:focus-within{/*Quando eu clico dentro do input... caixa do email e senha*/
+    background-color: white;
+}
+
+div.campo > input{
+    background-color: aqua;
+    font-size: 1em;
+    width: 80%;
+    border: none;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-8px);
+}
+
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+form > input[type=submit]:hover{
+    background-color: black;
+    color: white;
+}
+form > .botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;/*Mesmo com a fonte definida em 16 px, isso não se aplica a todas as tags, exemplo a tag "a" dos links, por isso atribuimos o "1em" para que ele entre no padrão.*/
+    width: 100%;/*Altura*/
+    height: 40%;/*Largura*/
+    padding-top: 10px;/*Distãncia do topo*/
+    background-color: white;/*Cor do fundo*/
+    border: 1px solid #49a09d;/*Cor da borda*/
+    color: #204948;/*Cor do botão*/
+    border-radius: 8px;/*Borda arredonada*/
+    text-decoration: none;/*barras do link..."não"*/
+}
+form > a.botao:hover{
+    background: #6cd3cf;
+}
+form > a.botao > i{
+    font-size: 1.2em;
+}

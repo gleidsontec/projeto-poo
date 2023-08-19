@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(213, 240, 184);
+    margin: 40px;
+    padding: 10px;
+}
+
+.termos{
+    align-content: center;
+    margin-left: 10%;
+    background-color: white;
+}
+
+.box{
+    align-content: center;
+    height: 50px;
+    margin-left: 10%;
+    background-color: white;
+    
+
+}
