@@ -1,6 +1,7 @@
+
 <?php 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        include "estudio";
+        include "conexao.php";
 
         $username = $_POST["username"];
         $email = $_POST["email"];
@@ -8,7 +9,7 @@
         
         $sql = "SELECT id FROM users WHERE email = ?";
         
-        $stmt = $conn->prepare($sql);
+        $stmt = $conexao->prepare($sql);
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt->store_result();
@@ -18,6 +19,7 @@
         session_start();
         $_SESSION['mensagem']= "E-mail já Cadastrado.";
         header("Location: process_cadastro.php");
+        
         exit;
         }
     
@@ -28,7 +30,7 @@
 
     $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 
-    $stmt = $conn->prepare($sql);
+    $stmt = $conexao->prepare($sql);
     $stmt->bind_param("sss", $username, $email, $hashed_password);
     if ($stmt->execute()){
         session_start();
@@ -43,4 +45,16 @@
     $conn->close();
 }
 ?>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Usuario Ja cadastrado</h1>
+    <a href="cadastro.php">Voltar</
+</body>
+</html>
+

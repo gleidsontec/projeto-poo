@@ -65,8 +65,8 @@
     <body>
     <div class="container">
         <h1>Cadastre-se</h1>
-    <form 
-            
+    <form action="process_cadastro.php" method="post">
+
             <label for="iusername">Nome de usuário:</label><br>
             <input type="text" name="username" id="iusername"><br>
             <br>
@@ -78,16 +78,11 @@
             <label for="ipassword">Senha: </label><br>
             <input type="password" name="password" id="ipassword"><br>
             <br>
-     
-           <a href="pagina_inicial.php">cadastrar</a>
-            <br>
-            <br>
-
-            <a href="login.php">Voltar</
-            echo "usuario cadastrado com sucesso" 
-        </form>
-        
-        </form>
+                
+            <input type="submit" value="Cadastrar">
+    </form>
+      
+     <a href="login.php">Voltar</
         </div> 
     </body>
 </html>

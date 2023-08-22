@@ -58,8 +58,9 @@
 
     </style>
     <body>
-        <div>
+        <div class="container">
             <h1>login</h1>
+        <form action="pagina_inicial.php" method="POST">
             <input type="text" placeholder="nome">
             <br><br>
             <input type="password" placeholder="Senha">
@@ -75,7 +76,7 @@
            
             
            
-           
+            </form>
         </div>
     </body>
 

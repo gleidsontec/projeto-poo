@@ -12,23 +12,21 @@
 
       
        body{
-        background-color: wheat;
-        background-image: url(estudio\ de\ musica.png);
-        margin-right: 20%;
-        padding: 10px;
-        padding-right: 10%;
-        padding-left: 50px;
-        width: 400px;
-        margin-top: 5%;
-        margin-left: 30%;
-        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+            background-image: -o-linear-gradient(45deg);
+            background-image: url(estudio\ de\ musica.png);
+            background-color: wheat;
        }
        
        .conteudo{
-            background-color: white;
-            padding: 10px;
-            margin: 5%;
-            padding-left: 5%;
+        background-color: rgba(0, 0 , 0 , 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: white;
        }
 
        button{
@@ -45,7 +43,6 @@
 
     </style>
          <div class="conteudo">
-        <div class="container">
         <h1>Seja bem vindo </h1>
         <h3>Obrigado por nos escolher 
           </h3> 
@@ -63,7 +60,7 @@
     <br>
     <a href="cadastro.php">Voltar</
 
-    </div>
+
     </div>
 
 </body>
