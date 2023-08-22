@@ -1,45 +1,83 @@
-<?php 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        include "db.php";
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+</head>
 
-        $username = $_POST["username"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        
-        $sql = "SELECT id FROM users WHERE email = ?";
-        
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $stmt->store_result();
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: -o-linear-gradient(45deg);
+            background-image: url(estudio\ de\ musica.png);
+            background-color: wheat;
 
-        if($stmt->num_rows > 0){
-        
-        session_start();
-        $_SESSION['mensagem']= "E-mail já Cadastrado.";
-        header("Location: atualizar.php");
-        exit;
+
         }
-    
-        $stmt->close();
-    
 
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        div{
+            background-color: rgba(0, 0 , 0 , 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: white;
+            
+            
+        }
 
-    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
 
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $username, $email, $hashed_password);
-    if ($stmt->execute()){
-        session_start();
-        $_SESSION['mensagem']= "Usuário Cadastrado com Sucesso";
-        header("Location: login.php");
-    }else{
-        session_start();
-        $_SESSION['mensagem']= "Erro ao cadastrar o usuario". $conn->error; 
-        
-    }
-    $stmt->close();
-    $conn->close();
-}
-?>
+
+        }
+
+        button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 20px;
+            color: white;
+            font-size: 15px;
+
+
+        }
+
+        button:hover{
+            background-color: deepskyblue;
+            cursor: pointer;
+
+        }
+
+    </style>
+    <body>
+        <div>
+            <h1>login</h1>
+            <input type="text" placeholder="nome">
+            <br><br>
+            <input type="password" placeholder="Senha">
+            <br><br>
+           <button>Enviar</button>
+           
+           
+            
+            <Br></Br>
+
+            Não tem uma conta? <a href="cadastro.php">cadastre-se aqui</a>
+
+           
+            
+           
+           
+        </div>
+    </body>
+
+
+</html>

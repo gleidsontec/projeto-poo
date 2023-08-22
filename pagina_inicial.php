@@ -30,13 +30,23 @@
             margin: 5%;
             padding-left: 5%;
        }
+
+       button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 20px;
+            color: white;
+            font-size: 15px;
+       }
            
         
 
     </style>
          <div class="conteudo">
         <div class="container">
-        <h1>Seja bem vindo <?php if (isset($_COOKIE['nome'])) { echo $_COOKIE['nome']; }?>!</h1>
+        <h1>Seja bem vindo </h1>
         <h3>Obrigado por nos escolher 
           </h3> 
 
@@ -51,7 +61,7 @@
                
        
     <br>
-    <a href="index.php">Voltar</
+    <a href="cadastro.php">Voltar</
 
     </div>
     </div>
