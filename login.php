@@ -61,12 +61,18 @@
         <div class="container">
             <h1>login</h1>
         <form action="pagina_inicial.php" method="POST">
-            <input type="text" placeholder="nome">
-            <br><br>
-            <input type="password" placeholder="Senha">
-            <br><br>
-           <button>Enviar</button>
-           
+
+        <label for="iusername">Nome de usuário:</label><br>
+            <input type="text" name="username" id="iusername">
+            <br>
+            <br>
+
+            <label for="ipassword">Senha: </label><br>
+            <input type="password" name="password" id="ipassword"><br>
+            <br>
+                
+            <input type="submit" value="Enviar">
+
            
             
             <Br></Br>
@@ -82,3 +88,4 @@
 
 
 </html>
+

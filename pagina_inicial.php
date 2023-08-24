@@ -58,7 +58,7 @@
                
        
     <br>
-    <a href="cadastro.php">Voltar</
+    <a href="login.php">Voltar</
 
 
     </div>

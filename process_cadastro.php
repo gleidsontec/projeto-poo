@@ -1,3 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: -o-linear-gradient(45deg);
+            background-image: url(estudio\ de\ musica.png);
+            background-color: wheat;
+
+        }
+
+        .container{
+            background-color: rgba(0, 0 , 0 , 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: white;
+            
+        }
+           
+    </style>
+<body>
+    <div class="container">
+    <h1>Usuario já cadastrado</h1>
+    <a href="cadastro.php">Voltar</
+    </div>
+    
+</body>
+</html>
 
 <?php 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -45,16 +82,4 @@
     $conn->close();
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Usuario Ja cadastrado</h1>
-    <a href="cadastro.php">Voltar</
-</body>
-</html>
 
