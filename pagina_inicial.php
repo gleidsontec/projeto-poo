@@ -44,13 +44,15 @@
     </style>
          <div class="conteudo">
         <h1>Seja bem vindo </h1>
-        <h3>Obrigado por nos escolher 
-          </h3> 
+        <br>
+        <h3>Obrigado por nos escolher </h3> 
+       
 
     
 
        
         <p>O que Deseja fazer?</p>
+      
 
         <li><a href="alugar_estudio.php">alugar estudio</a></li>
         <br>

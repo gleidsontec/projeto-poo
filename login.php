@@ -62,27 +62,22 @@
             <h1>login</h1>
         <form action="pagina_inicial.php" method="POST">
 
-        <label for="iusername">Nome de usuário:</label><br>
-            <input type="text" name="username" id="iusername">
+            <label for="iusername">Nome de usuário:</label><br>
+            <input type="text" name="username" id="iusername" required>
             <br>
             <br>
 
             <label for="ipassword">Senha: </label><br>
-            <input type="password" name="password" id="ipassword"><br>
+            <input type="password" name="password" id="ipassword" required><br>
             <br>
                 
             <input type="submit" value="Enviar">
 
-           
-            
             <Br></Br>
-
-            Não tem uma conta? <a href="cadastro.php">cadastre-se aqui</a>
-
-           
-            
-           
+        
             </form>
+            
+            Não tem uma conta? <a href="cadastro.php">cadastre-se aqui</a>
         </div>
     </body>
 

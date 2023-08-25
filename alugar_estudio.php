@@ -11,6 +11,8 @@
 <title>Carrinho de compras PHP</title>
 <style type="text/css">
 
+
+
     h2.title{
         background-color:#069;
         width:100%;
@@ -36,8 +38,8 @@
         display: block;
         width:100%;
         padding:10px;
-        color:white;
-        background-color:#5fb382;
+       
+      
         text-align: center;
         text-decoration: none;
     }
@@ -52,25 +54,57 @@
         font-size:16px;
         color:black;
     }
+    .Container{
+        width: 100%;
+       
+    }
+
+    .Voltar{
+        background-color: #069;
+        position: absolute;
+        top: 50%;
+        left: 1%;
+       
+        padding: 10px;
+        border-radius: 15px;
+    }
+    
 
     </style>
     </head>
 <body>
     <h2 class="title">Carrinho com PHP</h2>
     <div class="carrinho-container">
+   
+    <div class="Container">
+        <img src="imagem1.jpg" alt="imagem 1" width="217px"> 
+        <img src="imagem2.jpg" alt="imagem 2"width="250px"/>
+        <img src="imagem3.jpg" alt="imagem 3"width="250px" 
 
-    <?php 
-    $itens = array(['nome' =>'curso 1','imagem' =>'imagem1.jpg','preço'=>'200'], ['nome' =>'curso 2','imagem' =>'imagem2.jpg','preço'=>'400']);
+
+    </div> 
+    <p><br></p>
+    <div class="Voltar">
+    <a href="pagina_inicial.php">Voltar</a>
+    </div>
     
-    foreach ($itens as $key => $value) {
-       
-    }
-    ?>
+
+   
     <div class="produto">
 
     <img src="<?php echo $value['imagem'] ?>" />
-    <a href="?adicionar=<?php echo $key ?>"Adicionar ao carrinho!</a>
-    </div>
+    <a href="?adicionar=<?php echo $key ?>"Adicionar ao carrinho!
+</a>
+    
+    </div><br>
+    <h1>Estudio</h1>
+
+
+</body>
+</html>
+
+
+
   
     <?php 
     
@@ -78,16 +112,40 @@
      </div>
      <?php 
 
-     if(isset($_GET['adicionar'])){
+     if(isset($_GET['adicionar']))
+        //vamos adicionar ao carrinho
         $idProduto = (int) $_GET['adicionar'];
-        if(isset($itens[$idProduto]))
+        if(isset($itens['$idProduto'])){
+            if(isset($_SESSION['carinho'][$idProduto])){
+                $_SESSION['carinho'][$idProduto]['quantidade']++;
+            }else{
+                $_SESSION['carinho'][$idProduto] = array('quantidade'=>1,'nome'=>$itens[$idProduto]['nome'],'preço'=>$itens[$idProduto]['preço']);
+            }
+            echo '<script>alert("O item foi adicionado ao carinho.");</sript>';
+        }else{
+            die('');
+        }
 
       
      
      ?>
+     <h2 class="title">Carinho:</h2>
+     <?php include('carinho.php'); 
+     
+     ?>
+
+     <?php 
+     foreach($_SESSION['carinho'] as $key => $value) {
+        //nome
+        //quantidade 
+        //preço
+        echo '<div class="carrinho-item">';
+        echo '<p>Nome: '.$value['nome'].' | Quantidade: '.$value['Quantidade'].' | Preço: '.($value['Quantidade']*$value['Preço']).'</p';
+        echo '<hr>';
+        echo '</div>';
+     }
+     ?>
 
 
- 
-    
-</body>
-</html>
+
+

@@ -68,19 +68,21 @@
     <form action="process_cadastro.php" method="post">
 
             <label for="iusername">Nome de usuário:</label><br>
-            <input type="text" name="username" id="iusername"><br>
+            <input type="text" name="username" id="iusername" required><br>
             <br>
 
             <label for="iemail">E-mail: </label><br>
-            <input type="email" name="email"><br>
+            <input type="email" name="email" required><br>
             <br>
 
             <label for="ipassword">Senha: </label><br>
-            <input type="password" name="password" id="ipassword"><br>
+            <input type="password" name="password" id="ipassword" required><br>
             <br>
                 
             <input type="submit" value="Cadastrar">
+           
     </form>
+    <br>
       
      <a href="login.php">Voltar</
         </div> 
